@@ -1,0 +1,27 @@
+[project]
+name = "dsa-leetcode"
+version = "0.1.0"
+description = "Python solutions to the NeetCode 150 and supplemental LeetCode problems"
+requires-python = ">=3.14"
+
+[tool.ruff]
+line-length = 100
+target-version = "py314"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "UP", "B", "SIM", "C4", "RET", "PL"]
+ignore = [
+    # LeetCode dictates the method signatures, which are camelCase.
+    "N802",
+    "N803",
+    # Algorithm code is legitimately dense in constants and branches.
+    "PLR2004",
+    "PLR0911",
+    "PLR0912",
+    "PLR0913",
+    "PLR0915",
+]
+
+[tool.mypy]
+python_version = "3.14"
+strict = true

@@ -1,0 +1,44 @@
+name: Update progress
+
+# Regenerates the README progress table and PROGRESS.md from the solution files on disk,
+# then commits the result. Pushes made with GITHUB_TOKEN do not trigger workflows, so this
+# cannot loop.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'neetcode-150/**'
+      - 'random-problems/**'
+      - 'scripts/**'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-progress
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+
+      - name: Regenerate progress
+        run: python scripts/update_progress.py
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- README.md PROGRESS.md; then
+            echo "Progress already up to date."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md PROGRESS.md
+          git commit -m "chore: update progress [skip ci]"
+          git push
