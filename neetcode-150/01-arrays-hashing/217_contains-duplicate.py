@@ -1,8 +1,8 @@
 """217. Contains Duplicate (Easy)
-https://leetcode.com/problems/<slug>/
+https://leetcode.com/problems/contains-duplicate/
 
-Time:  O(?)
-Space: O(?)
+Time:  O(n)
+Space: O(n)
 """
 
 
@@ -16,3 +16,8 @@ class Solution:
             num_set.add(num)
 
         return False
+
+
+# class Solution:
+#     def containsDuplicate(self, nums: list[int]) -> bool:
+#         return len(nums) != len(set(nums))
