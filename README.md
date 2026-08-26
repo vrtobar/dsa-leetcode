@@ -47,7 +47,7 @@ Start a new problem from [`docs/solution_template.py`](docs/solution_template.py
 <!-- progress:start -->
 | Track | Solved | Total | Progress |
 | :---- | :----: | :---: | :------- |
-| Arrays & Hashing | 5 | 9 | `██████░░░░` 56% |
+| Arrays & Hashing | 6 | 9 | `███████░░░` 67% |
 | Two Pointers | 0 | 5 | `░░░░░░░░░░` 0% |
 | Sliding Window | 0 | 6 | `░░░░░░░░░░` 0% |
 | Stack | 0 | 6 | `░░░░░░░░░░` 0% |
@@ -65,7 +65,7 @@ Start a new problem from [`docs/solution_template.py`](docs/solution_template.py
 | Intervals | 0 | 6 | `░░░░░░░░░░` 0% |
 | Math & Geometry | 0 | 8 | `░░░░░░░░░░` 0% |
 | Bit Manipulation | 0 | 7 | `░░░░░░░░░░` 0% |
-| **NeetCode 150 total** | **5** | **150** | `░░░░░░░░░░` 3% |
+| **NeetCode 150 total** | **6** | **150** | `░░░░░░░░░░` 4% |
 | Supplemental LeetCode | 0 | — | easy: 0 · medium: 0 · hard: 0 |
 <!-- progress:end -->
 
